@@ -1,5 +1,9 @@
 <?php
 
+require('vendor/autoload.php');
+
+use App\Entities\Video;
+
 include 'Videoclub.php';
 include 'Cliente.php';
 include 'Producto.php';
