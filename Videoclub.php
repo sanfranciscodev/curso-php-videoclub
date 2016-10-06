@@ -8,7 +8,7 @@ Para los clientes se usa como clave al nombre, y como valor al objeto cliente.
 Para los productos, se usa como clave el nombre, y como valor un array de dos elementos,
 siendo el primero el objeto Producto y el segundo la cantidad disponible.
 */
-
+namespace App\EjercicioVideoclub; 
 
 
 class Videoclub

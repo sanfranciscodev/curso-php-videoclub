@@ -3,7 +3,7 @@
 Clase: Pelicula
 Clase para representar a las películas que alquila el videoclub.
 */
-
+namespace App\EjercicioVideoclub; 
 
 
 class Pelicula extends Producto

@@ -1,13 +1,5 @@
 <?php
-
-include 'Videoclub.php';
-include 'Cliente.php';
-include 'Producto.php';
-include 'Juego.php';
-include 'CD.php';
-include 'Pelicula.php';
-
-
+namespace App\EjercicioVideoclub; 
 
 // Videoclub
 $videoClub01 = new Videoclub('La esquina videoclub');

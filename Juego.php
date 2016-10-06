@@ -4,7 +4,7 @@ Clase: Juego
 Clase para representar a los juegos que alquila el videoclub.
 */
 
-
+namespace App\EjercicioVideoclub; 
 
 class Juego extends Producto
 {

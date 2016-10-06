@@ -3,7 +3,7 @@
 Clase: Producto
 Clase abstracta para representar a los productos que alquila el videoclub.
 */
-
+namespace App\EjercicioVideoclub; 
 
 
 abstract class Producto

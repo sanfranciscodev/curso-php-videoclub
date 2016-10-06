@@ -3,7 +3,7 @@
 Clase: CD
 Clase para representar a los CDs que alquila el videoclub.
 */
-
+namespace App\EjercicioVideoclub; 
 
 
 class CD extends Producto

@@ -4,7 +4,7 @@ Clase: Cliente
 Clase para representar a los clientes del videoclub.
 */
 
-
+namespace App\EjercicioVideoclub; 
 
 class Cliente
 {
