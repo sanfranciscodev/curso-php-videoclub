@@ -1,4 +1,4 @@
-# curso-php-videoclub
+# Curso de PHP - Videoclub
 Este es un repositorio donde se almacenara el código del ejemplo "VideoClub" realizado por los alumnos del Curso de PHP.
 
 
@@ -15,11 +15,11 @@ git checkout master                   #Para volver a la rama master
 ```
 
 ```git
-git pull --rebase                     #Para traer lo nuevo de master que esta en GitHub
+git pull                              #Para traer lo nuevo de master que esta en GitHub
 ```
 
 ```git
-git checkout -b crear_usuarios/#125   #Crea la rama
+git checkout -b crear_usuarios/#125   #Crea la nueva rama
 ```
 
 4) Mientras se va trabajando, es recomendable, cuando se logran pequeños pasos, ir haciendo commits sobre la rama en la que estamos trabajando, y pusheando los cambios al servidor:
@@ -29,7 +29,7 @@ git status                          #Comprobar los archivos modificados y si est
 ```
 
 ```git
-git add -A .                        #Agrega todos los archivos para ser commiteados
+git add -A                          #Agrega todos los archivos para ser commiteados
 ```
 
 ```git
@@ -53,7 +53,7 @@ git checkout master       #Pararse sobre master
 ```
 
 ```git
-git pull --rebase         #Traer lo que está en el master del repositorio remoto
+git pull                  #Traer lo que está en el master del repositorio remoto
 ```
 
 ```git
