@@ -1,0 +1,17 @@
+{
+    "name": "utn/videoclub",
+    "description": "nada",
+    "type": "project",
+    "autoload":{
+        "psr-4":{
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "juan marotti",
+            "email": "nachomarotti@gmail.com"
+        }
+    ],
+    "require": {}
+}
