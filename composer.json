@@ -1,0 +1,12 @@
+{
+    "name": "cursophp7/videoclub",
+    "description": "Ejercicio del videoclub",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "require": {}
+}

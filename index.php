@@ -1,70 +1,44 @@
 <?php
+require('vendor/autoload.php');
 
-include 'Videoclub.php';
-include 'Cliente.php';
-include 'Producto.php';
-include 'Juego.php';
-include 'CD.php';
-include 'Pelicula.php';
+use App\Videoclub\Videoclub;
+use App\Videoclub\Cliente;
+use App\Videoclub\Producto;
+use App\Videoclub\Juego;
+use App\Videoclub\Cd;
+use App\Videoclub\Pelicula;
 
+$videoclub = new Videoclub("Copias 100% legales");
+echo "Videoclub: " . $videoclub->getNombre() . "<br><br>";
 
+$cliente1 = new Cliente("Ivan");
+$cliente2 = new Cliente("Piqui");
 
-// Videoclub
-$videoClub01 = new Videoclub('La esquina videoclub');
+$videoclub->nuevoCliente($cliente1);
+$videoclub->nuevoCliente($cliente2);
 
+echo "Clientes de la tienda: ";
+$clientesVideoclub = $videoclub->getClientes();
 
-// Clientes
-$cliente01 = new Cliente('Juan Carlos');
-$cliente02 = new Cliente('Gabriel');
-$cliente03 = new Cliente('Nachi');
-
-
-// Productos
-$juego01 = new Juego('Half Life', 32.5, 'XBox', 'FPS');
-$juego02 = new Juego('Day of the Tentacle', 22.0, 'XBox', 'Graphical Adventure');
-$juego03 = new Juego('Counter Strike', 18.5, 'Playstation 4', 'FPS');
-$CD01 = new CD('La mona, que se yo', 42.5, 63, 'Cuarteto');
-$CD02 = new CD('Chayanne, recontra que se yo', 66.3, 55, 'Romántico');
-$CD03 = new CD('Marama, cualquiera', 12.3, 54, 'Cumbia');
-$pelicula01 = new Pelicula('Ben Hur', 22.3, 'Castellano', 124, 'Épico');
-$pelicula02 = new Pelicula('Terminator 5', 32.5, 'Inglés', 130, 'Acción');
-$pelicula03 = new Pelicula('El hombre que araña', 12.7, 'Inglés', 94, 'Comedia');
-
-
-// nombre del videoclub
-print('Videoclub:' . "\n");
-print($videoClub01->getNombre()) . "\n";
-
-
-// agregar productos a videoclub
-$videoClub01->agregarProducto($juego01, 2);
-$videoClub01->agregarProducto($juego02, 1);
-$videoClub01->agregarProducto($juego03, 3);
-$videoClub01->agregarProducto($CD01, 4);
-$videoClub01->agregarProducto($CD02, 2);
-$videoClub01->agregarProducto($CD03, 3);
-$videoClub01->agregarProducto($pelicula01, 2);
-$videoClub01->agregarProducto($pelicula02, 1);
-$videoClub01->agregarProducto($pelicula03, 3);
-
-
-// agregar clientes a videoclub
-$videoClub01->agregarCliente($cliente01);
-$videoClub01->agregarCliente($cliente02);
-$videoClub01->agregarCliente($cliente03);
-
-
-// productos en el videoclub
-print('Productos:' . "\n");
-for($i = 0; $i < count($videoClub01->nombresDeProductos()); $i++) {
-    print($videoClub01->nombresDeProductos()[$i] . "\n");
+foreach ($clientesVideoclub as $cliente) {
+  echo "<br>" . $cliente->getNombre();
 }
 
+echo "<br><br>";
 
-// clientes en el videoclub
-print('Clientes:' . "\n");
-for($i = 0; $i < count($videoClub01->nombresDeClientes()); $i++) {
-    print($videoClub01->nombresDeClientes()[$i] . "\n");
+$pelicula = new Pelicula("Una pelicula", 554.34, "es_es", 180, "Accion");
+$juego = new Juego("Juego nuevo", 1090.40, "Ps4", "Aventuras");
+
+$videoclub->nuevoProducto($pelicula);
+$videoclub->nuevoProducto($juego);
+
+echo "Productos disponibles: ";
+$productosVideoclub = $videoclub->getProductos();
+
+foreach ($productosVideoclub as $producto) {
+  echo "<br>" . $producto->getNombre() .
+       " - Precio: $" . $producto->getPrecio() .
+       " - Genero: " . $producto->getGenero();
 }
 
-
+echo "<br><br>";
